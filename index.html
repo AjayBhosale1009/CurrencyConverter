@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo16.png" type="image/x-icon" style="border-radius: 15px;">
+    <title>Currency Converter - Convert to your currency</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 20px;
+            background-color: antiquewhite;
+            padding: 5px;
+
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: black;
+            transition: all;
+            transition-duration: 500ms;
+        }
+
+
+        nav li a:hover {
+            text-decoration: none;
+            /* color: rgb(3, 209, 48); */
+            color: #80B462
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+
+        nav ul li {
+            list-style: none;
+            /* margin: y-axis(top bottom) & x-axis(left right)  */
+            margin: 0 23px;
+
+        }
+
+
+        #logo {
+            justify-content: center;
+            align-items: center;
+            /* (top bottom) (left right) */
+            margin: 0px 23px;
+            width: 40px;
+        }
+
+
+        li:hover {
+            cursor: pointer;
+        }
+
+
+        #logo:hover {
+            cursor: pointer;
+        }
+
+
+        .container {
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            max-width: 80vw;
+            margin: auto;
+
+        }
+
+        .container h1,
+        h2 {
+            margin: 23px 0;
+        }
+
+        .container form input[type="number"],
+        select,
+        label {
+            font-size: 25px;
+            margin-bottom: 23px;
+            width: 23vw;
+        }
+
+        .container form input,
+        select {
+            border-radius: 8px;
+        }
+
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn {
+            font-size: 20px;
+            /* y / x */
+            padding: 11px 20px;
+            background-color: antiquewhite;
+            width: 144px;
+            color: black;
+            border-radius: 13px;
+            margin: 23px 0;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(250, 216, 172);
+            transition: all;
+            transition-duration: 500ms;
+            color: black;
+        }
+
+
+        form input[type="number"],
+        select {
+            padding: 10px;
+        }
+
+
+        /* Currency Table */
+        .output table {
+            width: 50vw;
+            text-align: center;
+            border: 2px solid black;
+            font-size: 20px;
+        }
+
+        .output table th {
+            padding: 9px;
+        }
+
+        .output {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                font-size: 14px;
+            }
+
+            nav ul li {
+                margin: 5px 13px;
+            }
+
+            nav {
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container form input[type="number"],
+            select,
+            label {
+                font-size: 25px;
+                margin-bottom: 23px;
+                width: 56vw;
+            }
+
+            .output table {
+                font-size: 12px;
+            }
+        }
+
+
+
+        footer {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logoContainer"><a href="/"><img id="logo" src="logo80.png"></a></div>
+
+        <ul>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/"> About Us </a></li>
+            <li> <a href="/"> Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Choose a currency to convert</h1>
+        <form action="" method="get">
+            <label for="quantity">Choose a quantity: </label>
+            <input type="number" name="quantity" min="1" max="10">
+            <label for="currency">Choose a currency: </label>
+            <select name="currency">
+                <option value="USD">US Dollar</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="EUR">Euro</option>
+            </select>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+        <div class="output">
+            <h2>Here is your value in different currencies </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; All rights reserved
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!-- Time Stamp = 33:42 -->
